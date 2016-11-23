@@ -7,7 +7,7 @@
 .nav-links {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 400px;
   margin: 0 auto;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
@@ -25,6 +25,16 @@
     &:hover {
       background: black;
       color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .nav-links {
+    width: 300px;
+
+    a {
+      padding: 5px 20px;
     }
   }
 }
