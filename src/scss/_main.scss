@@ -1,6 +1,6 @@
 #about {
   background: pink;
-  height: 800px;
+  height: 400px;
 
   img {
     width: 100%;
@@ -10,37 +10,10 @@
 
 #icecream {
   background: blue;
-  height: 800px;
+  height: 400px;
 }
 
 #contact {
   background: blue;
-  height: 800px;
-}
-
-.section {
-  width: 100%;
-  height: 500px;
-  z-index: 0;
-  -webkit-transform: translateZ(0);
-  transform: translateZ (0);
-  -webkit-transition: -webkit-transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-a[id="about"]:target ~ #main.section {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-a[id="icecream"]:target ~ #main.section {
-  -webkit-transform: translateY(-500px);
-  transform: translateY(-500px);
-}
-
-a[id="contact"]:target ~ #main.section {
-  -webkit-transform: translateY(-1000px);
-  transform: translateY(-1000px);
+  height: 400px;
 }
