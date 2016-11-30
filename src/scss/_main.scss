@@ -1,19 +1,30 @@
-#about {
-  background: pink;
-  height: 400px;
+article img {
+  width: 100%;
+}
 
-  img {
-    width: 100%;
-    margin-top: 50px;
+#top {
+  position: relative;
+  z-index: -1;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: $headerfont;
+    color: white;
+    font-size: 3rem;
   }
 }
 
 #icecream {
-  background: blue;
-  height: 400px;
+  background: $primary-color;
+}
+
+#about {
+  background: $secondary-color;
 }
 
 #contact {
-  background: blue;
-  height: 400px;
+  background: $secondary-color;
+  height: 600px;
 }
