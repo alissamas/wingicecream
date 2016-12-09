@@ -1,0 +1,345 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300");
+@import url(slick.css);
+@import url(slick-theme.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.logo {
+  display: block;
+  width: 80px;
+  margin: 15px auto; }
+
+nav {
+  position: fixed;
+  background: white;
+  opacity: 0.95;
+  width: 100%;
+  padding-bottom: 20px;
+  z-index: 10; }
+  nav .nav-links {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black; }
+    nav .nav-links ul {
+      list-style: none; }
+      nav .nav-links ul li {
+        display: inline-block; }
+      nav .nav-links ul .active {
+        background: #ffe0d0;
+        color: white; }
+    nav .nav-links a {
+      color: black;
+      font-family: "Souce Code Pro", monospace;
+      font-size: 1rem;
+      display: block;
+      text-decoration: none;
+      padding: 5px 40px;
+      transition: all 0.5s ease; }
+      nav .nav-links a:hover {
+        background: #ff9c8d;
+        color: white; }
+
+@media only screen and (max-width: 700px) {
+  nav .nav-links {
+    width: 400px; }
+    nav .nav-links a {
+      font-size: 0.9rem;
+      padding: 5px 15px; } }
+
+@media only screen and (max-width: 450px) {
+  .nav-links {
+    width: 300px; }
+    .nav-links a {
+      padding: 5px 20px; } }
+
+article img {
+  width: 100%; }
+
+#top {
+  position: relative;
+  z-index: -1; }
+  #top h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    font-family: "Souce Code Pro", monospace;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    color: white;
+    font-size: 3rem;
+    top: 40%; }
+    #top h2:hover {
+      padding-bottom: 4px; }
+  #top img {
+    margin-top: 130px; }
+
+#icecream {
+  background: #ffe0d0;
+  height: 550px;
+  position: relative; }
+  #icecream:hover {
+    background: #ff9c8d;
+    transition: all 0.5s ease; }
+  #icecream h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    font-family: "Souce Code Pro", monospace;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    top: 40%; }
+    #icecream h2:hover {
+      padding-bottom: 4px; }
+
+#meetwing a {
+  position: relative; }
+  #meetwing a svg {
+    width: 300px;
+    z-index: 1;
+    position: absolute;
+    bottom: 480px;
+    right: 200px; }
+    #meetwing a svg .path {
+      stroke-dasharray: 2000;
+      stroke-dashoffset: 2000;
+      animation: dash 6s linear infinite; }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
+
+#contact {
+  background: #ffe0d0;
+  height: 560px;
+  position: relative; }
+  #contact p {
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    font-family: "Souce Code Pro", monospace;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    top: 40%;
+    text-decoration: none; }
+    #contact p:hover {
+      padding-bottom: 4px; }
+    #contact p a {
+      color: blue; }
+      #contact p a:hover {
+        background: blue;
+        color: white; }
+  #contact .social-icons {
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    font-family: "Souce Code Pro", monospace;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    font-size: 2rem;
+    bottom: 0;
+    top: 80%;
+    text-decoration: none; }
+    #contact .social-icons:hover {
+      padding-bottom: 4px; }
+    #contact .social-icons a {
+      color: blue; }
+
+@media only screen and (max-width: 1175px) {
+  #meetwing a svg {
+    width: 300px;
+    bottom: 460px;
+    right: 200px; } }
+
+@media only screen and (max-width: 1000px) {
+  #top h2 {
+    top: 50%; }
+  #meetwing a svg {
+    width: 300px;
+    bottom: 350px;
+    right: 150px; } }
+
+@media only screen and (max-width: 760px) {
+  #top h2 {
+    font-size: 2.2rem;
+    top: 60%; }
+  #icecream {
+    height: 350px; }
+    #icecream h2 {
+      font-size: 2.2rem;
+      top: 50%; }
+  #meetwing a svg {
+    width: 200px;
+    bottom: 280px;
+    right: 120px; }
+  #contact p {
+    font-size: 2.2rem; } }
+
+@media only screen and (max-width: 500px) {
+  #top h2 {
+    font-size: 1.6rem;
+    top: 65%; }
+  #icecream h2 {
+    font-size: 1.6rem; }
+  #meetwing a svg {
+    width: 150px;
+    bottom: 150px;
+    right: 40px; }
+  #contact {
+    height: 300px; }
+    #contact p {
+      font-size: 1.2rem; } }
+
+@media only screen and (max-width: 400px) {
+  #meetwing a svg {
+    width: 120px;
+    bottom: 150px;
+    right: 40px; } }
+
+.menu {
+  padding: 50px;
+  padding-top: 200px;
+  display: flex;
+  background: #ffe0d0; }
+  .menu .menu-image {
+    width: 50%; }
+    .menu .menu-image img {
+      width: 350px;
+      display: block;
+      margin: 0 auto; }
+  .menu .menu-text {
+    width: 50%;
+    margin: 0 10%; }
+    .menu .menu-text h2 {
+      text-decoration: underline;
+      font-family: "Souce Code Pro", monospace;
+      color: white;
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 300; }
+    .menu .menu-text p {
+      font-family: "Raleway", sans-serif;
+      color: black;
+      font-size: 0.9rem;
+      line-height: 1.6rem; }
+
+.scoops {
+  margin: 0 100px;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  display: block; }
+  .scoops .singlescoop {
+    position: relative; }
+    .scoops .singlescoop img {
+      width: 300px;
+      height: 300px; }
+    .scoops .singlescoop .overlay {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      border-radius: 50%;
+      background-color: #ff9c8d;
+      transition: all 0.5s ease;
+      cursor: pointer; }
+      .scoops .singlescoop .overlay h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: 400;
+        font-family: "Souce Code Pro", monospace;
+        padding: 4px;
+        width: 150px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transition: all 0.4s ease; }
+      .scoops .singlescoop .overlay:hover {
+        opacity: 0.9;
+        transition: all 0.5s ease-in; }
+
+.slick-prev::before {
+  content: "←";
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black;
+  -webkit-font-smoothing: antialiased; }
+
+.slick-next::before {
+  font-family: 'slick';
+  content: "→";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black;
+  -webkit-font-smoothing: antialiased; }
+
+.back-button a {
+  color: black;
+  font-family: "Souce Code Pro", monospace;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  margin-bottom: 100px; }
+
+.slick-arrow {
+  display: none; }
+
+@media only screen and (max-width: 960px) {
+  .menu .menu-image img {
+    width: 300px; }
+  .menu .menu-text h2 {
+    font-size: 2rem; }
+  .menu .menu-text p {
+    font-size: 0.8rem; } }
+
+@media only screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column; }
+    .menu .menu-image {
+      width: 100%; }
+    .menu .menu-text {
+      width: 100%;
+      margin: 0 auto;
+      padding: 5% 10%;
+      text-align: center; } }
+
+@media only screen and (max-width: 500px) {
+  .menu .menu-text {
+    padding: 5%; } }
+
+.store img {
+  width: 100%;
+  display: block; }
