@@ -2,5 +2,16 @@
   img {
     width: 100%;
     display: block;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .wing {
+    padding-top: 180px;
+
+    .wing-image {
+      padding: 40px 0;
+    }
   }
 }
