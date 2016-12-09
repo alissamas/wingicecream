@@ -5,6 +5,7 @@
     <title>+ WING ICE CREAM +</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scrolltrigger.css" media="screen">
   </head>
 
   <body>
@@ -22,10 +23,10 @@
     <main>
       <article id="top">
         <img src="images/wing2.jpg">
-        <h2>not your mama's ice cream joint.</h2>
+        <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">not your mama's ice cream joint.</h2>
       </article>
       <article id="icecream">
-        <a class="section-hover" href="icecream.html"><h2>get the scoop</h2>
+        <a data-scroll="toggle(.fromBottomIn, .fromBottomOut)" class="section-hover" href="icecream.html"><h2>get the scoop</h2>
           </a>
       </article>
 
@@ -59,19 +60,36 @@
       </article>
 
       <article id="contact">
-        <p><a href="https://www.google.com/maps?q=wing+ice+cream&ion=1&espv=2&bav=on.2,or.r_cp.&bvm=bv.140496471,d.cGc&biw=1211&bih=650&dpr=2&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjk_6Kji-HQAhUQxmMKHcIcA6AQ_AUIBigB" target="_blank">1145 Maunakea St.
+        <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)"><a href="https://www.google.com/maps?q=wing+ice+cream&ion=1&espv=2&bav=on.2,or.r_cp.&bvm=bv.140496471,d.cGc&biw=1211&bih=650&dpr=2&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjk_6Kji-HQAhUQxmMKHcIcA6AQ_AUIBigB" target="_blank">1145 Maunakea St.
         Honolulu, HI 96817</a><br><br>
         open 12-10pm daily</p>
         <div class="social-icons">
-          <a href="https://www.yelp.com/biz/wing-shave-ice-and-ice-cream-honolulu" target="_blank"><i class="fa fa-yelp" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/WingIceCreamParlor/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/wingicecream/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a data-scroll="toggle(.fromBottomIn, .fromBottomOut)" href="https://www.yelp.com/biz/wing-shave-ice-and-ice-cream-honolulu" target="_blank"><i class="fa fa-yelp" aria-hidden="true"></i></a>
+          <a data-scroll="toggle(.fromBottomIn, .fromBottomOut)" href="https://www.facebook.com/WingIceCreamParlor/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a data-scroll="toggle(.fromBottomIn, .fromBottomOut)" href="https://www.instagram.com/wingicecream/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
       </article>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/a66e157a23.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+    window.counter = function() {
+      // this refers to the html element with the data-scroll-showCallback tag
+      var span = this.querySelector('span');
+      var current = parseInt(span.textContent);
+
+      span.textContent = current + 1;
+    };
+
+    document.addEventListener('DOMContentLoaded', function(){
+      var trigger = new ScrollTrigger({
+        addHeight: true
+      });
+    });
+    </script>
   </body>
 </html>

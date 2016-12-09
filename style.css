@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300");
 @import url(slick.css);
 @import url(slick-theme.css);
+@import url(scrolltrigger.css);
 * {
   box-sizing: border-box;
   margin: 0;
