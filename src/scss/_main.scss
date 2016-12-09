@@ -7,14 +7,11 @@ article img {
   z-index: -1;
 
   h2 {
-    position: absolute;
-    top: 50%;
-    right: 40%;
-    left: 10%;
-    font-family: $headerfont;
+    @include headertext;
+
     color: white;
     font-size: 3rem;
-    font-weight: 300;
+    top: 40%;
   }
 
   img {
@@ -33,22 +30,178 @@ article img {
   }
 
   h2 {
-    text-align: center;
-    text-decoration: underline;
-    color: blue;
-    font-family: $headerfont;
-    font-size: 2.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include headertext;
+
+    top: 40%;
   }
 }
 
-#about {
-  background: $secondary-color;
+#meetwing {
+  a {
+    position: relative;
+
+    svg {
+      width: 300px;
+      z-index: 1;
+      position: absolute;
+      bottom: 480px;
+      right: 200px;
+
+      .path {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: dash 6s linear infinite;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
 }
 
 #contact {
-  background: $secondary-color;
-  height: 600px;
+  background: $primary-color;
+  height: 560px;
+  position: relative;
+
+  p {
+    @include headertext;
+
+    top: 40%;
+    text-decoration: none;
+
+    a {
+      color: blue;
+
+      &:hover {
+        background: blue;
+        color: white;
+      }
+    }
+  }
+
+  .social-icons {
+    @include headertext;
+
+    font-size: 2rem;
+    bottom: 0;
+    top: 80%;
+    text-decoration: none;
+
+    a {
+      color: blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 1175px) {
+  #meetwing {
+    a {
+      svg {
+        width: 300px;
+        bottom: 460px;
+        right: 200px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #top {
+    h2 {
+      top: 50%;
+    }
+  }
+
+  #meetwing {
+    a {
+      svg {
+        width: 300px;
+        bottom: 350px;
+        right: 150px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #top {
+    h2 {
+      font-size: 2.2rem;
+      top: 60%;
+    }
+  }
+
+  #icecream {
+    height: 350px;
+
+    h2 {
+      font-size: 2.2rem;
+      top: 50%;
+    }
+  }
+
+  #meetwing {
+    a {
+      svg {
+        width: 200px;
+        bottom: 280px;
+        right: 120px;
+      }
+    }
+  }
+
+  #contact {
+    p {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #top {
+    h2 {
+      font-size: 1.6rem;
+      top: 65%;
+    }
+  }
+
+  #icecream {
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  #meetwing {
+    a {
+      svg {
+        width: 150px;
+        bottom: 150px;
+        right: 40px;
+      }
+    }
+  }
+
+  #contact {
+    height: 300px;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #meetwing {
+    a {
+      svg {
+        width: 120px;
+        bottom: 150px;
+        right: 40px;
+      }
+    }
+  }
 }

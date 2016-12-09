@@ -1,7 +1,39 @@
 $headerfont: "Souce Code Pro", monospace;
+$bodycopy: "Raleway", sans-serif;
 $primary-color: #ffe0d0;
 $secondary-color: #ff9c8d;
 $tertiary-color: #74b3fa;
+$text-color: black;
+
+@mixin maintext {
+  color: $text-color;
+  font-family: $headerfont;
+  font-size: 1rem;
+}
+
+@mixin headertext {
+  text-align: center;
+  text-decoration: underline;
+  color: blue;
+  font-family: $headerfont;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+
+  &:hover {
+    padding-bottom: 4px;
+  }
+}
+
+@mixin bodytext {
+  font-family: $bodycopy;
+  color: black;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
 
 * {
   box-sizing: border-box;

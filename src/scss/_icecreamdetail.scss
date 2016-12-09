@@ -1,7 +1,167 @@
-.scoops {
-  width: 100%;
+.menu {
+  padding: 50px;
+  padding-top: 200px;
+  display: flex;
+  background: $primary-color;
 
-  img {
-    width: 200px;
+  .menu-image {
+    width: 50%;
+
+    img {
+      width: 350px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .menu-text {
+    width: 50%;
+    margin: 0 10%;
+
+    h2 {
+      text-decoration: underline;
+      font-family: $headerfont;
+      color: white;
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    p {
+      @include bodytext;
+    }
+  }
+}
+
+.scoops {
+  margin: 0 100px;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  display: block;
+
+  .singlescoop {
+    position: relative;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      border-radius: 50%;
+      background-color: $secondary-color;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      h3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: white;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: 400;
+        font-family: $headerfont;
+        padding: 4px;
+        width: 150px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transition: all 0.4s ease;
+      }
+
+      &:hover {
+        opacity: 0.9;
+        transition: all 0.5s ease-in;
+      }
+    }
+  }
+}
+
+.slick-prev::before {
+  content: "←";
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+}
+
+.slick-next::before {
+  font-family: 'slick';
+  content: "→";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+}
+
+.back-button {
+  a {
+    @include maintext;
+
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 100px;
+  }
+}
+
+.slick-arrow {
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  .menu {
+    .menu-image {
+      img {
+        width: 300px;
+      }
+    }
+
+    .menu-text {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+
+    .menu-image {
+      width: 100%;
+    }
+
+    .menu-text {
+      width: 100%;
+      margin: 0 auto;
+      padding: 5% 10%;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .menu {
+    .menu-text {
+      padding: 5%;
+    }
   }
 }
