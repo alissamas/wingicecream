@@ -6,6 +6,10 @@
   }
 }
 
+.wing-image {
+  transform: rotateY(180deg);
+}
+
 @media only screen and (max-width: 800px) {
   .wing {
     padding-top: 180px;
