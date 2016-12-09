@@ -106,18 +106,24 @@ article img {
     #icecream h2:hover {
       padding-bottom: 4px; }
 
-#meetwing a {
-  position: relative; }
-  #meetwing a svg {
-    width: 300px;
-    z-index: 1;
-    position: absolute;
-    bottom: 480px;
-    right: 200px; }
-    #meetwing a svg .path {
-      stroke-dasharray: 2000;
-      stroke-dashoffset: 2000;
-      animation: dash 6s linear infinite; }
+#meetwing {
+  background: #ff9c8d; }
+  #meetwing a {
+    background: #ff9c8d;
+    position: relative; }
+    #meetwing a:hover {
+      filter: grayscale(100%) opacity(0.6);
+      transition: all 0.7s ease; }
+    #meetwing a svg {
+      width: 300px;
+      z-index: 1;
+      position: absolute;
+      bottom: 480px;
+      right: 200px; }
+      #meetwing a svg .path {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: dash 6s linear infinite; }
 
 @keyframes dash {
   to {
@@ -145,7 +151,7 @@ article img {
     #contact p a {
       color: blue; }
       #contact p a:hover {
-        background: blue;
+        background: #ff9c8d;
         color: white; }
   #contact .social-icons {
     text-align: center;

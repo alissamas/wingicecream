@@ -37,8 +37,16 @@ article img {
 }
 
 #meetwing {
+  background: $secondary-color;
+
   a {
+    background: $secondary-color;
     position: relative;
+
+    &:hover {
+      filter: grayscale(100%) opacity(0.6);
+      transition: all 0.7s ease;
+    }
 
     svg {
       width: 300px;
@@ -77,7 +85,7 @@ article img {
       color: blue;
 
       &:hover {
-        background: blue;
+        background: $secondary-color;
         color: white;
       }
     }
