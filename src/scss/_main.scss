@@ -105,6 +105,30 @@ article img {
   }
 }
 
+.fromTopIn {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromTopOut {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, -20px);
+  opacity: 0;
+}
+
+.fromBottomIn {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fromBottomOut {
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translate(0, 20px);
+  opacity: 0;
+}
+
 @media only screen and (max-width: 1175px) {
   #meetwing {
     a {

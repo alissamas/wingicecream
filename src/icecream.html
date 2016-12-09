@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>+ WING ICE CREAM +</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+    <link rel="stylesheet" href="scrolltrigger.css" media="screen">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -19,10 +21,10 @@
           <img src="images/icecream2.jpg">
         </div>
         <div class="menu-text">
-          <h2>our ice cream</h2>
-          <p>We offer a wide range of homemade, handmade flavors. Past specials include goober grape, avocado, ume shiso, and honey lavender. Our flavors change regularly on the season- every visit to us is a unique adventure. We play vinyl records all day and keep the lights on late into the night. Enter with an open mind, and you will leave with a smile.</p>
+          <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">our ice cream</h2>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">We offer a wide range of homemade, handmade flavors. Past specials include goober grape, avocado, ume shiso, and honey lavender. Our flavors change regularly on the season- every visit to us is a unique adventure. We play vinyl records all day and keep the lights on late into the night. Enter with an open mind, and you will leave with a smile.</p>
         </br>
-          <p>We also offer non-dairy and vegan ice cream.</p>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">We also offer non-dairy and vegan ice cream.</p>
         </div>
       </div>
       <div class="scoops">
@@ -37,6 +39,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
       <script type="text/javascript" src="slick.min.js"></script>
-    <script src="script.js"></script>
+      <script src="ScrollTrigger.min.js"></script>
+      <script src="script.js"></script>
+
+      <script>
+      window.counter = function() {
+        // this refers to the html element with the data-scroll-showCallback tag
+        var span = this.querySelector('span');
+        var current = parseInt(span.textContent);
+
+        span.textContent = current + 1;
+      };
+
+      document.addEventListener('DOMContentLoaded', function(){
+        var trigger = new ScrollTrigger({
+          addHeight: true
+        });
+      });
+      </script>
   </body>
 </html>

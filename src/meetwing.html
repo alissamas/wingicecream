@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>+ WING ICE CREAM +</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scrolltrigger.css" media="screen">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -16,8 +15,8 @@
     <main>
       <div class="menu wing">
         <div class="menu-text wing-text">
-          <h2>hi, nice to meet you.</h2>
-          <p>What started out as a hobby of mine has turned into a full blown operation. My ice cream has been described as "hella good" and "some bomb ass ice cream". But don't take my word for it- come and try it for yourself.</p>
+          <h2 data-scroll="toggle(.fromBottomIn, .fromBottomOut)">hi, nice to meet you.</h2>
+          <p data-scroll="toggle(.fromBottomIn, .fromBottomOut)">What started out as a hobby of mine has turned into a full blown operation. My ice cream has been described as "hella good" and "some bomb ass ice cream". But don't take my word for it- come and try it for yourself.</p>
         </div>
         <div class="menu-image wing-image">
           <img src="images/wing.png">
@@ -32,6 +31,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
       <script type="text/javascript" src="slick.min.js"></script>
-    <script src="script.js"></script>
+      <script src="ScrollTrigger.min.js"></script>
+      <script src="script.js"></script>
+
+      <script>
+      window.counter = function() {
+        // this refers to the html element with the data-scroll-showCallback tag
+        var span = this.querySelector('span');
+        var current = parseInt(span.textContent);
+
+        span.textContent = current + 1;
+      };
+
+      document.addEventListener('DOMContentLoaded', function(){
+        var trigger = new ScrollTrigger({
+          addHeight: true
+        });
+      });
+      </script>
   </body>
 </html>
