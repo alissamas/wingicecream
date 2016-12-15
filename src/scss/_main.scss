@@ -32,15 +32,16 @@ article img {
   h2 {
     @include headertext;
 
+    text-decoration: underline;
     top: 40%;
   }
 }
 
 #meetwing {
-  background: $secondary-color;
+  background: $primary-color;
 
   a {
-    background: $secondary-color;
+    background: $primary-color;
     position: relative;
 
     &:hover {
@@ -58,7 +59,7 @@ article img {
       .path {
         stroke-dasharray: 2000;
         stroke-dashoffset: 2000;
-        animation: dash 6s linear infinite;
+        animation: dash 5s ease-in infinite;
       }
 
       @keyframes dash {
@@ -82,10 +83,10 @@ article img {
     text-decoration: none;
 
     a {
-      color: blue;
+      color: $header-color;
 
       &:hover {
-        background: $secondary-color;
+        background: $text-color;
         color: white;
       }
     }
@@ -100,7 +101,7 @@ article img {
     text-decoration: none;
 
     a {
-      color: blue;
+      color: $header-color;
     }
   }
 }

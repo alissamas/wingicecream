@@ -34,7 +34,7 @@ nav {
     }
 
     a {
-      @include maintext;
+      @include bodytext;
 
       display: block;
       text-decoration: none;
@@ -42,7 +42,7 @@ nav {
       transition: all 0.5s ease;
 
       &:hover {
-        background: $secondary-color;
+        background: black;
         color: white;
       }
     }

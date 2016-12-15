@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Raleway:300");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Infant:300,400|Open+Sans+Condensed:300");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,300");
 @import url(slick.css);
 @import url(slick-theme.css);
 @import url(scrolltrigger.css);
@@ -33,18 +33,19 @@ nav {
       nav .nav-links ul li {
         display: inline-block; }
       nav .nav-links ul .active {
-        background: #ffe0d0;
+        background: #fadce9;
         color: white; }
     nav .nav-links a {
+      font-family: "Roboto Mono", sans-serif;
       color: black;
-      font-family: "Souce Code Pro", monospace;
-      font-size: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.8rem;
       display: block;
       text-decoration: none;
       padding: 5px 40px;
       transition: all 0.5s ease; }
       nav .nav-links a:hover {
-        background: #ff9c8d;
+        background: black;
         color: white; }
 
 @media only screen and (max-width: 700px) {
@@ -68,15 +69,14 @@ article img {
   z-index: -1; }
   #top h2 {
     text-align: center;
-    text-decoration: underline;
     color: blue;
-    font-family: "Souce Code Pro", monospace;
-    font-size: 2.5rem;
+    font-family: "Cormorant Infant", serif;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 300;
+    font-weight: 400;
     color: white;
     font-size: 3rem;
     top: 40%; }
@@ -86,31 +86,31 @@ article img {
     margin-top: 130px; }
 
 #icecream {
-  background: #ffe0d0;
+  background: #fadce9;
   height: 550px;
   position: relative; }
   #icecream:hover {
-    background: #ff9c8d;
+    background: #ffcee3;
     transition: all 0.5s ease; }
   #icecream h2 {
     text-align: center;
-    text-decoration: underline;
     color: blue;
-    font-family: "Souce Code Pro", monospace;
-    font-size: 2.5rem;
+    font-family: "Cormorant Infant", serif;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 300;
+    font-weight: 400;
+    text-decoration: underline;
     top: 40%; }
     #icecream h2:hover {
       padding-bottom: 4px; }
 
 #meetwing {
-  background: #ff9c8d; }
+  background: #fadce9; }
   #meetwing a {
-    background: #ff9c8d;
+    background: #fadce9;
     position: relative; }
     #meetwing a:hover {
       filter: grayscale(100%) opacity(0.6);
@@ -124,27 +124,26 @@ article img {
       #meetwing a svg .path {
         stroke-dasharray: 2000;
         stroke-dashoffset: 2000;
-        animation: dash 6s linear infinite; }
+        animation: dash 5s ease-in infinite; }
 
 @keyframes dash {
   to {
     stroke-dashoffset: 0; } }
 
 #contact {
-  background: #ffe0d0;
+  background: #fadce9;
   height: 560px;
   position: relative; }
   #contact p {
     text-align: center;
-    text-decoration: underline;
     color: blue;
-    font-family: "Souce Code Pro", monospace;
-    font-size: 2.5rem;
+    font-family: "Cormorant Infant", serif;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 300;
+    font-weight: 400;
     top: 40%;
     text-decoration: none; }
     #contact p:hover {
@@ -152,19 +151,18 @@ article img {
     #contact p a {
       color: blue; }
       #contact p a:hover {
-        background: #ff9c8d;
+        background: black;
         color: white; }
   #contact .social-icons {
     text-align: center;
-    text-decoration: underline;
     color: blue;
-    font-family: "Souce Code Pro", monospace;
-    font-size: 2.5rem;
+    font-family: "Cormorant Infant", serif;
+    font-size: 3rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2rem;
     bottom: 0;
     top: 80%;
@@ -249,7 +247,7 @@ article img {
   padding: 50px;
   padding-top: 200px;
   display: flex;
-  background: #ffe0d0; }
+  background: #fadce9; }
   .menu .menu-image {
     width: 50%; }
     .menu .menu-image img {
@@ -260,18 +258,17 @@ article img {
     width: 50%;
     margin: 0 10%; }
     .menu .menu-text h2 {
-      text-decoration: underline;
-      font-family: "Souce Code Pro", monospace;
+      font-family: "Cormorant Infant", serif;
       color: white;
-      font-size: 2.5rem;
+      font-size: 3rem;
       display: block;
       margin-bottom: 20px;
       font-weight: 300; }
     .menu .menu-text p {
-      font-family: "Raleway", sans-serif;
+      font-family: "Roboto Mono", sans-serif;
       color: black;
-      font-size: 0.9rem;
-      line-height: 1.6rem; }
+      font-size: 0.8rem;
+      line-height: 1.8rem; }
 
 .scoops {
   margin: 0 100px;
@@ -293,7 +290,7 @@ article img {
       bottom: 0;
       opacity: 0;
       border-radius: 50%;
-      background-color: #ff9c8d;
+      background-color: #ffcee3;
       transition: all 0.5s ease;
       cursor: pointer; }
       .scoops .singlescoop .overlay h3 {
@@ -304,7 +301,7 @@ article img {
         transform: translate(-50%, -50%);
         text-align: center;
         font-weight: 400;
-        font-family: "Souce Code Pro", monospace;
+        font-family: "Cormorant Infant", serif;
         padding: 4px;
         width: 150px;
         border-top: 1px solid #fff;
@@ -334,7 +331,7 @@ article img {
 
 .back-button a {
   color: black;
-  font-family: "Souce Code Pro", monospace;
+  font-family: "Cormorant Infant", serif;
   font-size: 1rem;
   text-align: center;
   display: block;
